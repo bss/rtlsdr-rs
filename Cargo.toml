@@ -1,0 +1,26 @@
+[package]
+name = "rtlsdr-rs"
+version = "0.1.0"
+authors = ["Bo Stendal Sorensen <bo@stendal-sorensen.net>"]
+description = "Rusty wrapper around librtlsdr"
+license = "MIT"
+edition = "2018"
+homepage = "https://github.com/bss/rtlsdr-rs"
+repository = "https://github.com/bss/rtlsdr-rs"
+readme = "README.md"
+keywords = ["rtlsdr", "librtlsdr", "sdr", "hardware", "radio"]
+
+[dependencies]
+quicli = "0.4"
+structopt = "0.2"
+log = "0.4"
+signal-hook = "0.1.7"
+librtlsdr-sys = "0.1.0"
+
+[lib]
+name = "rtlsdr"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rtlsdr"
+path = "src/bin.rs"
